@@ -1,0 +1,272 @@
+/* --- TÉMATICKÉ PROMĚNNÉ --- */
+:root {
+    --color-parchment-light: #f4e9d5;
+    --color-parchment-main: #e6d7bc;
+    --color-parchment-dark: #c4af83;
+    --color-crimson: #8c1c1c;      
+    --color-wood: #3d2b1f;         
+    --color-gold: #b08d46;
+    
+    --font-heading: 'Cinzel', serif;
+    --font-text: 'Almendra', serif;
+}
+
+/* --- CELKOVÝ STYL --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-wood);
+    background-image: 
+        linear-gradient(rgba(61, 43, 31, 0.8), rgba(61, 43, 31, 0.8)),
+        url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: var(--color-wood);
+    font-family: var(--font-text);
+    font-size: 1.25rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* --- ZÁHLAVÍ --- */
+.hero-header {
+    background-color: var(--color-parchment-main);
+    background-image: url('https://www.transparenttextures.com/patterns/p6.png'); 
+    padding: 60px 20px;
+    border-bottom: 5px double var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.logo-frame {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    filter: sepia(0.1) contrast(1.05);
+    transition: transform 0.5s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.02);
+}
+
+.header-subtitle {
+    font-family: var(--font-heading);
+    color: var(--color-crimson);
+    font-weight: 700;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- NAVIGACE --- */
+.medieval-nav {
+    background-color: var(--color-crimson);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.medieval-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.medieval-nav a {
+    color: var(--color-parchment-light);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    padding: 15px 25px;
+    display: block;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.medieval-nav a:hover {
+    color: var(--color-gold);
+}
+
+/* --- KONTEJNER OBSAHU --- */
+.main-content {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* --- PERGAMENOVÁ KARTA --- */
+.parchment-card {
+    background-color: var(--color-parchment-main);
+    background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+    padding: 50px;
+    border-radius: 2px;
+    border: 1px solid var(--color-parchment-dark);
+    box-shadow: 
+        5px 5px 20px rgba(0,0,0,0.4),
+        inset 0 0 50px rgba(130, 100, 60, 0.2);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.parchment-card::before { 
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 1px solid rgba(130, 100, 60, 0.15);
+    pointer-events: none;
+}
+
+.ornate-title {
+    font-family: var(--font-heading);
+    color: var(--color-crimson);
+    text-align: center;
+    font-size: 2.4rem;
+    margin-top: 0;
+    border-bottom: 2px double var(--color-gold);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.drop-cap::first-letter {
+    font-family: var(--font-heading);
+    float: left;
+    font-size: 4rem;
+    line-height: 1;
+    padding-right: 10px;
+    color: var(--color-crimson);
+    font-weight: 900;
+}
+
+/* --- HERNÍ SEKCE --- */
+.section-heading {
+    color: var(--color-parchment-light);
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.game-item {
+    flex: 1;
+    min-width: 280px;
+    background-color: rgba(230, 215, 188, 0.1);
+    border: 1px solid var(--color-gold);
+    padding: 30px;
+    text-align: center;
+    color: var(--color-parchment-light);
+    border-radius: 4px;
+}
+
+.icon-circle {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px var(--color-gold));
+}
+
+.game-item h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+}
+
+/* --- PROTAŽENÉ A ŠIROKÉ MENU --- */
+.menu-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;        
+    max-width: 780px; 
+    margin: 0 auto;   
+}
+
+.menu-col {
+    flex: 1;
+    min-width: 280px;
+}
+
+.menu-col h3 {
+    color: var(--color-crimson);
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.menu-col p {
+    margin: 24px 0;   
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgba(61, 43, 31, 0.2);
+    padding-bottom: 6px;
+}
+
+/* --- PATIČKA --- */
+.medieval-footer {
+    background-color: var(--color-parchment-dark);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px solid var(--color-crimson);
+    margin-top: 100px;
+}
+
+.footer-logo-frame {
+    max-width: 280px;
+    margin: 0 auto 20px auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(140, 28, 28, 0.3);
+}
+
+.footer-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    font-style: italic;
+    color: var(--color-wood);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+/* --- MOBILNÍ ÚPRAVY --- */
+@media (max-width: 768px) {
+    .parchment-card { padding: 25px; }
+    .medieval-nav a { padding: 10px 15px; font-size: 0.9rem; }
+    .ornate-title { font-size: 1.8rem; }
+    .menu-col { min-width: 100%; }
+    .menu-flex { gap: 30px; }
+}
